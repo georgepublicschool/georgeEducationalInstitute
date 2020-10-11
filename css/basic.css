@@ -1,0 +1,21 @@
+@font-face{font-family:"SFProText";src:url('../fonts/SFProText-Regular.ttf');}
+@font-face{font-family:"Futura";src:url('../fonts/futura-md-bold.ttf');font-weight:bold;}
+@font-face{font-family:"Futura";src:url('../fonts/futura-md-regular.ttf');}
+html{scroll-behavior:smooth;}
+body,html{height:100%;}
+body{font-family:SFProText,sans-serif;margin:0;overflow-x:hidden;}
+::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-track{background-color:#9ED9F9}::-webkit-scrollbar-thumb{background:#008;border-radius:8px;}
+*{box-sizing:border-box;}
+.loader{position:fixed;z-index:2;height:100%;width:100%;left:0;top:0;background-color:#ffffff;}
+.loaderLoad{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100px;height:100px;}
+.loaderLoad>hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+.loaderLoad :first-child{background:#19A68C;animation-delay:-1.5s}
+.loaderLoad :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.loaderLoad :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.loaderLoad :last-child{background:#152994}
+@keyframes spin{
+	0%,100%{transform:translate(0)}
+	25%{transform:translate(160%)}
+	50%{transform:translate(160%, 160%)}
+	75%{transform:translate(0, 160%)}
+}

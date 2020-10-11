@@ -1,0 +1,16 @@
+				<div class="topMsg">
+					Welcome to MyFastClaim
+				</div>
+				<form onsubmit="return false;">
+					<label><div class="selectedDesig">Claimant</div> <span style="background-color:white;">Email &nbsp; &nbsp; &nbsp; &nbsp;</span></label>
+					<input type="email" name="mail1" required>
+					<label>Password</label>
+					<input type="password" name="pass1" required>
+					<div class="forgotPass">
+						<span style="cursor:pointer;">Forgot Password?</span>
+					</div>
+					<input type="submit" value="Sign In">
+					<div class="register">
+						Don't have an account? <span onclick="loadForm('sign-up')">Register</span>
+					</div>
+				</form>
