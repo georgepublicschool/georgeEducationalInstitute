@@ -5,7 +5,10 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no" name="viewport">
 	<meta name="author" content="Faisal Akhtar">
-	<meta name="title" content="George Institute">
+	<meta name="theme-color" content="#cc2027">
+	<link href="favicons/favicon_32x32.ico" rel="shortcut icon">
+
+	<meta name="title" content="George Educational Institute">
 	<meta name="description"
 		content="The first institute of its kind in India which has fully fledged Network and Faculty to coach boys & girls appearing for the various entrance exams of UPSC to Defence-oriented establishments such as Rashtriya India Military College (R.I.M.C.) Military school/sainik school, National Defence Academy (NDA),Combined Defence Service Examinations (CDSE), Air Force, Navy, A.C.C & Women Entry.">
 
@@ -27,7 +30,7 @@
 		}
 
 		::-webkit-scrollbar-thumb {
-			background: var(--theme-color);
+			background: var(--theme-dark);
 		}
 
 		@font-face {
@@ -93,7 +96,7 @@
 			width: 100%;
 			max-width: 1500px;
 			margin: 0 auto !important;
-			padding: 0 70px;
+			padding: 0 35px;
 		}
 
 		.nav-primary {
@@ -105,11 +108,13 @@
 			list-style-type: none;
 			margin: 0;
 			overflow: hidden;
+			text-align: center;
 		}
 
 		.main-menu {
 			float: right;
 			padding: 0;
+			display: none;
 		}
 
 		.under-menu {
@@ -123,14 +128,12 @@
 
 		.over-menu li {
 			font-size: 16px;
-			float: right;
 			line-height: 30px;
-			margin: 0 0 0 25px;
+			margin: 0 8px;
 		}
 
 		.main-menu li {
 			font-size: 22px;
-			float: right;
 			line-height: 90px;
 			margin: 0 0 0 35px;
 		}
@@ -151,8 +154,8 @@
 
 		.site-title {
 			font-family: 'JosefinSans', sans-serif;
-			max-width: 333px;
 			padding: 10px 0;
+			max-width: 333px;
 			display: inline-block;
 		}
 
@@ -181,11 +184,13 @@
 
 		.nav-secondary {
 			border-bottom: 3px solid #f2f2f2;
+			display: none;
 		}
 
 		.banner-image {
 			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("classroom.jpg");
-			height: calc(100vh - 170px);
+			height: calc(100vh - 120px);
+			min-height: 400px;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -199,7 +204,7 @@
 		}
 
 		.banner-text h1 {
-			font-size: 64px;
+			font-size: 48px;
 			line-height: 1.25;
 			margin: 0 0 0 0;
 			margin-bottom: 0.5em;
@@ -230,7 +235,7 @@
 			padding: 40px 0 0 0;
 			overflow: hidden;
 			transition-duration: 0.2s;
-			height: 255px;
+			height: 270px;
 		}
 
 		.notification-wrapper.closed {
@@ -241,16 +246,20 @@
 		.notification-bar {
 			color: var(--font-light);
 			background-color: var(--theme-color);
+			width: 95%;
 			max-width: 1000px;
 			margin: 0 auto;
 			border-radius: 6px;
-			padding: 30px;
+			padding: 15px;
+			padding-top: 50px;
 			text-align: center;
 			position: relative;
 		}
 
 		.close-notification {
-			float: right;
+			position: absolute;
+			right: 20px;
+			top: 20px;
 			cursor: pointer;
 			font-size: 24px;
 			line-height: 0.5;
@@ -259,7 +268,8 @@
 
 		.notification-bar svg {
 			position: absolute;
-			left: 30px;
+			left: 20px;
+			top: 10px;
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
@@ -282,6 +292,7 @@
 			font-weight: bold;
 			font-size: 40px;
 			color: var(--theme-color);
+			text-align: left;
 		}
 
 		.about-self button {
@@ -291,14 +302,17 @@
 		}
 
 		.course-rows {
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
 			width: 100%;
-			display: table;
+			overflow: hidden;
 		}
 
 		.course {
-			display: table-cell;
-			width: 25%;
-			padding: 20px;
+			width: 100%;
+			padding: 20px 0;
 		}
 
 		.course a {
@@ -310,53 +324,250 @@
 		.course a:hover {
 			text-decoration: underline;
 		}
+
+		.menu-bars {
+			position: absolute;
+			right: 30px;
+			top: 60px;
+			z-index: 10;
+		}
+
+		.bar1,
+		.bar2,
+		.bar3 {
+			width: 25px;
+			height: 3px;
+			background-color: var(--font-light);
+			margin: 4px 0;
+			transition: 0.4s;
+			border-radius: 25px;
+		}
+
+		.menu-bars.open {
+			position: fixed;
+		}
+
+		.menu-bars.open .bar1 {
+			-webkit-transform: rotate(-45deg) translate(-5px, 3px);
+			transform: rotate(-45deg) translate(-5px, 3px);
+		}
+
+		.menu-bars.open .bar2 {
+			opacity: 0;
+		}
+
+		.menu-bars.open .bar3 {
+			-webkit-transform: rotate(45deg) translate(-6px, -5px);
+			transform: rotate(45deg) translate(-6px, -5px);
+		}
+
+		.overlay-menu {
+			position: fixed;
+			background-color: var(--theme-color);
+			color: var(--font-light);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 100%;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			transition: 0.4s;
+		}
+
+		.overlay-menu.open {
+			top: 0;
+			left: 0;
+		}
+
+		.overlay-menu ul {
+			padding: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		.overlay-menu ul li {
+			display: block;
+			margin: 25px 0;
+		}
+
+		.overlay-menu button,
+		.overlay-menu button:hover {
+			color: var(--theme-dark);
+			background-color: var(--font-light);
+		}
+
+		body.unscroll {
+			overflow: hidden;
+		}
+
+		@media screen and (min-width:768px) {
+			.notification-bar {
+				padding: 30px;
+				padding-top: 50px;
+			}
+
+			.wrap {
+				padding: 0 70px;
+			}
+
+			.banner-text h1 {
+				font-size: 64px;
+			}
+
+			.course {
+				width: 50%;
+				padding: 20px;
+			}
+		}
+
+		@media screen and (min-width:1024px) {
+			.close-notification {
+				right: 30px;
+				top: 30px;
+			}
+
+			.notification-bar svg {
+				left: 30px;
+				top: 20px;
+			}
+
+			ul {
+				text-align: initial;
+			}
+
+			.main-menu {
+				display: block;
+			}
+
+			.over-menu li,
+			.main-menu li {
+				float: right;
+			}
+
+			.over-menu li {
+				margin: 0 0 0 25px;
+			}
+
+			.menu-bars,
+			.overlay-menu {
+				display: none;
+			}
+
+			body.unscroll {
+				overflow-y: auto;
+			}
+
+			.course {
+				width: 33.33%;
+				padding: 0 20px;
+			}
+
+			.nav-secondary {
+				display: initial;
+			}
+
+			.banner-image {
+				height: calc(100vh - 170px);
+			}
+		}
+
+		@media screen and (min-width:1366px) {
+			.course {
+				width: 25%;
+			}
+		}
+
+		@media screen and (max-width:400px) {
+			.wrap {
+				padding: 0 25px;
+			}
+
+			.banner-text h1 {
+				font-size: 40px;
+			}
+		}
 	</style>
-	<title>George Institute</title>
+	<title>George Educational Institute</title>
 </head>
 
 <body>
-	<nav class="nav-primary">
-		<ul class="over-menu wrap">
-			<li><a href="javascript:void(0)">Faculty / Staff</a></li>
-			<li><a href="javascript:void(0)">Teachers</a></li>
-			<li><a href="javascript:void(0)">Students</a></li>
-		</ul>
-	</nav>
+	<div>
+		<nav class="nav-primary">
+			<ul class="over-menu wrap">
+				<li><a href="javascript:void(0)">Faculty / Staff</a></li>
+				<li><a href="javascript:void(0)">Teachers</a></li>
+				<li><a href="javascript:void(0)">Students</a></li>
+			</ul>
+		</nav>
 
-	<header>
-		<div class="wrap">
-			<div class="site-title">
-				<h1><a class="grg">George</a><a class="ins">Institute</a></h1>
+		<header>
+			<div class="wrap">
+				<div class="site-title">
+					<h1><a class="grg">George</a><a class="ins">Institute</a></h1>
+				</div>
+
+				<ul class="main-menu ">
+					<li><a href="javascript:void(0)">Support</a></li>
+					<li><a href="javascript:void(0)">Contact Us</a></li>
+					<li><a href="javascript:void(0)">Visit</a></li>
+					<li><a href="javascript:void(0)">Apply</a></li>
+				</ul>
 			</div>
+		</header>
 
-			<ul class="main-menu ">
-				<li><a href="javascript:void(0)">Support</a></li>
-				<li><a href="javascript:void(0)">Contact Us</a></li>
-				<li><a href="javascript:void(0)">Visit</a></li>
-				<li><a href="javascript:void(0)">Apply</a></li>
+		<nav class="nav-secondary">
+			<ul class="under-menu wrap">
+				<a href="javascript:void(0)">
+					<li>About</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Admissions</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Academics</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Campus Life</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Community</li>
+				</a>
+			</ul>
+		</nav>
+
+		<div class="overlay-menu">
+			<ul>
+				<a href="javascript:void(0)">
+					<li>About</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Admissions</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Academics</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Campus Life</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Visit</li>
+				</a>
+				<a href="javascript:void(0)">
+					<li>Community</li>
+				</a>
+
+				<button>Admissions Open</button>
 			</ul>
 		</div>
-	</header>
 
-	<nav class="nav-secondary">
-		<ul class="under-menu wrap">
-			<a href="javascript:void(0)">
-				<li>About</li>
-			</a>
-			<a href="javascript:void(0)">
-				<li>Admissions</li>
-			</a>
-			<a href="javascript:void(0)">
-				<li>Academics</li>
-			</a>
-			<a href="javascript:void(0)">
-				<li>Campus Life</li>
-			</a>
-			<a href="javascript:void(0)">
-				<li>Community</li>
-			</a>
-		</ul>
-	</nav>
+		<a class="menu-bars"
+			onclick="this.classList.toggle('open');document.querySelector('.overlay-menu').classList.toggle('open');document.querySelector('body').classList.toggle('unscroll')">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</a>
+	</div>
 
 	<div class="banner-image">
 		<div class="banner-text wrap">
@@ -367,8 +578,14 @@
 
 	<div class="notification-wrapper">
 		<div class="notification-bar">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="120.641px" height="122.878px" viewBox="0 0 120.641 122.878" enable-background="new 0 0 120.641 122.878" xml:space="preserve">
-				<g><path fill-rule="evenodd" clip-rule="evenodd" d="M68.16,6.889c18.129,3.653,31.889,19.757,31.889,38.921 c0,22.594-2.146,39.585,20.592,54.716c-40.277,0-80.366,0-120.641,0C22.8,85.353,20.647,68.036,20.647,45.81 c0-19.267,13.91-35.439,32.182-38.979C53.883-2.309,67.174-2.265,68.16,6.889L68.16,6.889z M76.711,109.19 c-1.398,7.785-8.205,13.688-16.392,13.688c-8.187,0-14.992-5.902-16.393-13.688H76.711L76.711,109.19z"></path></g>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+				y="0px" width="120.641px" height="122.878px" viewBox="0 0 120.641 122.878"
+				enable-background="new 0 0 120.641 122.878" xml:space="preserve">
+				<g>
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M68.16,6.889c18.129,3.653,31.889,19.757,31.889,38.921 c0,22.594-2.146,39.585,20.592,54.716c-40.277,0-80.366,0-120.641,0C22.8,85.353,20.647,68.036,20.647,45.81 c0-19.267,13.91-35.439,32.182-38.979C53.883-2.309,67.174-2.265,68.16,6.889L68.16,6.889z M76.711,109.19 c-1.398,7.785-8.205,13.688-16.392,13.688c-8.187,0-14.992-5.902-16.393-13.688H76.711L76.711,109.19z">
+					</path>
+				</g>
 			</svg>
 			<a class="close-notification" onclick="this.parentElement.parentElement.classList.add('closed')">&times;</a>
 			<h3>COVID-19 Fall Reopening Plan</h3>
@@ -379,8 +596,30 @@
 	<div class="about-self">
 		<div class="wrap">
 			<h2>We Are George Institute</h2>
-			<p>George Educational Institute (GEI) was established in 1995 under the aegis of late Shri.P.K. Patnaik, an eminent educationist from odisha who settled down in the Doon Valley.</p>
-			<p>This institute was established keeping in view national as well as Defence requirements and motivated by the keen interest generated by the young Turks right from the tender age of ten years. This is the first institute of its kind in India which has fully fledged Network and Faculty to coach boys & girls appearing for the various entrance exams of UPSC to Defence-oriented establishments such as Rashtriya India Military College (R.I.M.C.) Military school/sainik school, National Defence Academy (NDA),Combined Defence Service Examinations (CDSE), Air Force, Navy, A.C.C & Women Entry.</p>
+			<p>George Educational Institute (GEI) was established in 1995 under the aegis of late Shri.P.K. Patnaik, an
+				eminent educationist from odisha who settled down in the Doon Valley.</p>
+			<p>This institute was established keeping in view national as well as Defence requirements and motivated by
+				the keen interest generated by the young Turks right from the tender age of ten years. This is the first
+				institute of its kind in India which has fully fledged Network and Faculty to coach boys & girls
+				appearing for the various entrance exams of UPSC to Defence-oriented establishments such as Rashtriya
+				India Military College (R.I.M.C.) Military school/sainik school, National Defence Academy (NDA),Combined
+				Defence Service Examinations (CDSE), Air Force, Navy, A.C.C & Women Entry.</p>
+
+			<button>Learn More</button>
+		</div>
+	</div>
+
+	<div class="about-self">
+		<div class="wrap">
+			<h2>Career in armed forces</h2>
+			<p>Career in the Armed Forces offers a very Attractive ,Challenging and Progressive option for our young men
+				& women finishing their 10+2, Graduation or Post Graduation Examination. On completion of manadatory
+				training in NDA, IMA, Air Forces & Naval Academy for 1 year respective they are capabale of handling
+				difficult and complex matters after becoming officers.</p>
+			<p>The services environment offers : A neet and healthy environment which is Result Oriented.There is no
+				better place to serve ,for Honest and Upright Persons than Armed forces. There is a Regimental pattern
+				in every activity.Whether it is work,play leisure or even while eating. Discipline,Punctuality and
+				Leadership are the keywords.Discipline becomes your way of life in every sphere.</p>
 
 			<button>Learn More</button>
 		</div>
@@ -393,45 +632,58 @@
 			<div class="course-rows">
 				<div class="course">
 					<h3>Sainik School</h3>
-					<p>Sainik School Kunjpura is one of the first five schools established by the Sainik Schools Society, New Delhi in 1961. At present there are 25 such schools covering all the states of the country. This school was founded by ..</p>
+					<p>Sainik School Kunjpura is one of the first five schools established by the Sainik Schools
+						Society, New Delhi in 1961. At present there are 25 such schools covering all the states of the
+						country. This school was founded by ..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 				<div class="course">
 					<h3>Military School</h3>
-					<p>It is a CBSE affiliated residential school for boys studying in class VI to XII. The school prepares the cadets for All India Senior School Certificate Examination and for joining defence forces as officers. The medium ..</p>
+					<p>It is a CBSE affiliated residential school for boys studying in class VI to XII. The school
+						prepares the cadets for All India Senior School Certificate Examination and for joining defence
+						forces as officers. The medium ..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 				<div class="course">
 					<h3>R.I.M.C.</h3>
-					<p>RIMC Traces its origin to the Prince of Wales Royal Indian Military College inaugurated on 13th March 1922 by his Royal Highness, Prince Edward VIII the Prince of Wales. The Rashtriya Indian Military College..</p>
+					<p>RIMC Traces its origin to the Prince of Wales Royal Indian Military College inaugurated on 13th
+						March 1922 by his Royal Highness, Prince Edward VIII the Prince of Wales. The Rashtriya Indian
+						Military College..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 				<div class="course">
 					<h3>N.D.A.</h3>
-					<p>George Educational Institute known for its best results for Cracking NDA had written exams in Dehradun. It has helped to fulfil the dreams of youth to join NDA. It has provided a suitable platform to prepare and groom students.</p>
+					<p>George Educational Institute known for its best results for Cracking NDA had written exams in
+						Dehradun. It has helped to fulfil the dreams of youth to join NDA. It has provided a suitable
+						platform to prepare and groom students.</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
-			</div>
-
-			<div class="course-rows">
 				<div class="course">
 					<h3>C.D.S.</h3>
-					<p>George Educational Institute, Dehradun is one of the best institutes CDS Coaching campus in Dehradun, which makes effort to deliver value to society by grooming students to be successful in..</p>
+					<p>George Educational Institute, Dehradun is one of the best institutes CDS Coaching campus in
+						Dehradun, which makes effort to deliver value to society by grooming students to be successful
+						in..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 				<div class="course">
 					<h3>O.T.A & Women's Entry</h3>
-					<p>The "Combined Defence Services" (CDS) Examination is conducted twice a year by the Union Public Service Commission for recruitment into the Indian Military Academy, Officers Training Academy,..</p>
+					<p>The "Combined Defence Services" (CDS) Examination is conducted twice a year by the Union Public
+						Service Commission for recruitment into the Indian Military Academy, Officers Training
+						Academy,..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 				<div class="course">
 					<h3>A.C.C.</h3>
-					<p>George Educational Institute also provide ACC Coaching.– ACC (Army Cadet College) WRITTEN EXAMINATION COACHING . George Educational Institute is a tradition of innovation and excellence continue ..</p>
+					<p>George Educational Institute also provide ACC Coaching.– ACC (Army Cadet College) WRITTEN
+						EXAMINATION COACHING . George Educational Institute is a tradition of innovation and excellence
+						continue ..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 				<div class="course">
 					<h3>H.M./Merchant Navy</h3>
-					<p>The Merchant Navy is a non military economic fleet, which accord with transporting baggage and infrequently, Passengers, through sea. Its fleet is therefore composed of large vessels (ships) such as Passenger vessels,..</p>
+					<p>The Merchant Navy is a non military economic fleet, which accord with transporting baggage and
+						infrequently, Passengers, through sea. Its fleet is therefore composed of large vessels (ships)
+						such as Passenger vessels,..</p>
 					<a href="javascript:void(0)">Read More</a>
 				</div>
 			</div>
