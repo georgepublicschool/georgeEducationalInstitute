@@ -1,30 +1,385 @@
 
-.more{color:#fff;width:100%;display:inline-block;position:relative;vertical-align:middle;overflow:hidden;display:flex;flex-wrap:wrap;padding-top:75px;}
-.more .col ul {list-style-type:none;font-size:18px;line-height:24px;margin-bottom:40px;padding: 0px;}
-.more .col li{margin-bottom:8px;padding:0px 10px;}
-.learn{padding:0;width:1360px;margin:0 auto;}
+		:root {
+			--theme-color: #cc2027;
+			--theme-dark: #7e1416;
+			--font-color: #010101;
+			--font-light: #efefef;
+		}
 
-.more .col{width:20%;float:left;margin-left: 1%;padding-left: 50px;}
-.more h4{margin:0;font-size:20px;line-height:26px;cursor:default;}
-.more img{position:relative;width:100px;left:50%;transform:translateX(-50%);}
-.more a{color:#fff;text-decoration:none;}
-.col>ul>a>li{position:relative;}
-.col>ul>a>li:before{content:"";position:absolute;width:20%;height:2px;bottom:0;left:0;background-color:#ffffff;visibility:hidden;-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transition:all 0.3s ease-in-out 0s;transition:all 0.3s ease-in-out 0s;}
-.col>ul>a>li:hover:before{visibility:visible;-webkit-transform:scaleX(1);transform:scaleX(1);}
+		* {
+			box-sizing: border-box;
+		}
+
+		::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: var(--theme-color);
+		}
+
+		@font-face {
+			font-family: "museo-slab";
+			src: url('fonts/museo_slab_sv/Museo_Slab_500.otf');
+		}
+
+		@font-face {
+			font-family: "museo-slab";
+			font-style: italic;
+			src: url('fonts/museo_slab_sv/Museo_Slab_500italic.otf');
+		}
+
+		@font-face {
+			font-family: "museo-slab";
+			font-weight: bold;
+			src: url('fonts/museo_slab_sv/Museo_Slab_700.ttf');
+		}
+
+		@font-face {
+			font-family: "museo-slab";
+			font-weight: 900;
+			src: url('fonts/museo_slab_sv/Museo_Slab_900.ttf');
+		}
+
+		@font-face {
+			font-family: "JosefinSans";
+			src: url('fonts/josefin_sans/static/JosefinSans-Regular.ttf');
+		}
+
+		@font-face {
+			font-family: "JosefinSans";
+			font-weight: bold;
+			src: url('fonts/josefin_sans/static/JosefinSans-Bold.ttf');
+		}
+
+		@font-face {
+			font-family: "JosefinSans";
+			font-weight: 100;
+			src: url('fonts/josefin_sans/static/JosefinSans-ExtraLight.ttf');
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: "museo-slab", sans-serif;
+			font-size: 18px;
+			color: var(--font-color);
+			margin: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			word-break: break-word;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.wrap {
+			width: 100%;
+			max-width: 1500px;
+			margin: 0 auto !important;
+			padding: 0 70px;
+		}
+
+		.nav-primary {
+			background-color: var(--theme-dark);
+			color: var(--font-light);
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.main-menu {
+			float: right;
+			padding: 0;
+		}
+
+		.under-menu {
+			text-align: center;
+		}
+
+		.nav-secondary ul li {
+			display: inline-block;
+			font-weight: bold;
+		}
+
+		.over-menu li {
+			font-size: 16px;
+			float: right;
+			line-height: 30px;
+			margin: 0 0 0 25px;
+		}
+
+		.main-menu li {
+			font-size: 22px;
+			float: right;
+			line-height: 90px;
+			margin: 0 0 0 35px;
+		}
+
+		.under-menu li {
+			text-transform: uppercase;
+			padding: 15px 20px;
+		}
+
+		.under-menu li:hover {
+			background-color: #f2f2f2;
+		}
+
+		header {
+			background-color: var(--theme-color);
+			color: var(--font-light);
+		}
+
+		.site-title {
+			font-family: 'JosefinSans', sans-serif;
+			max-width: 333px;
+			padding: 10px 0;
+			display: inline-block;
+		}
+
+		.site-title h1 {
+			margin: 0;
+			text-align: center;
+		}
+
+		.grg,
+		.ins {
+			display: block;
+			text-transform: uppercase;
+		}
+
+		.grg {
+			font-size: 120%;
+			letter-spacing: 10px;
+			font-weight: 100;
+		}
+
+		.ins {
+			font-size: 75%;
+			letter-spacing: 10px;
+			font-weight: bold;
+		}
+
+		.nav-secondary {
+			border-bottom: 3px solid #f2f2f2;
+		}
+
+		.banner-image {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("classroom.jpg");
+			height: calc(100vh - 170px);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+			align-items: center;
+		}
+
+		.banner-text {
+			color: var(--font-light);
+			text-shadow: 0 2px black;
+		}
+
+		.banner-text h1 {
+			font-size: 64px;
+			line-height: 1.25;
+			margin: 0 0 0 0;
+			margin-bottom: 0.5em;
+		}
+
+		button {
+			border: none;
+			outline: 0;
+			display: inline-block;
+			font-size: 100%;
+			font-family: inherit;
+			padding: 10px 25px;
+			color: var(--font-light);
+			background-color: var(--theme-color);
+			text-shadow: 0 2px 2px var(--font-dark);
+			box-shadow: 0 2px 4px #333333;
+			border-radius: 2px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: var(--theme-dark);
+			transition-duration: 0.2s;
+		}
+
+		.notification-wrapper {
+			padding: 40px 0 0 0;
+			overflow: hidden;
+			transition-duration: 0.2s;
+			height: 255px;
+		}
+
+		.notification-wrapper.closed {
+			padding: 0;
+			height: 0;
+		}
+
+		.notification-bar {
+			color: var(--font-light);
+			background-color: var(--theme-color);
+			max-width: 1000px;
+			margin: 0 auto;
+			border-radius: 6px;
+			padding: 30px;
+			text-align: center;
+			position: relative;
+		}
+
+		.close-notification {
+			float: right;
+			cursor: pointer;
+			font-size: 24px;
+			line-height: 0.5;
+			font-weight: bold;
+		}
+
+		.notification-bar svg {
+			position: absolute;
+			left: 30px;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			padding: 10px;
+			fill: var(--theme-color);
+			background-color: var(--font-light);
+		}
+
+		.about-self,
+		.courses-wrapper {
+			padding: 40px 0;
+			line-height: 1.5;
+			text-align: justify;
+			overflow: hidden;
+		}
+
+		.about-self h2,
+		.head-texts {
+			margin-top: 0;
+			font-weight: bold;
+			font-size: 40px;
+			color: var(--theme-color);
+		}
+
+		.about-self button {
+			margin-top: 30px;
+			float: right;
+			font-size: 90%;
+		}
+
+		.course-rows {
+			width: 100%;
+			display: table;
+		}
+
+		.course {
+			display: table-cell;
+			width: 25%;
+			padding: 20px;
+  			transition: 1s;
+
+		}
+		.course:hover {
+  			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
 
 
-#copyRight	{
-	font-size: small;
-	margin: 0;
-	color: white;
-	font-family: "Raleway", sans-serif;
-	text-align: center;
-}
+		.course a {
+			display: block;
+			color: blue;
+			text-align: right;
+		}
+
+		.course a:hover {
+			text-decoration: underline;
+		}
+		.results{
+			margin-top: 100px;
+		}
+		.gallery {
+		  border: 1px solid #ccc;
+		}
+
+		.gallery:hover {
+		  border: 1px solid #777;
+		}
+
+		.gallery img {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.desc {
+		  padding: 15px;
+		  text-align: center;
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+
+		.responsive {
+		  padding: 20px;
+		  float: left;
+		  width: 33.33%;
+		  margin:auto;
+		}
+
+		@media only screen and (max-width: 700px) {
+		  .responsive {
+		    width: 49.99999%;
+		    margin: 6px 0;
+		  }
+		}
+
+		@media only screen and (max-width: 500px) {
+		  .responsive {
+		    width: 100%;
+		  }
+		}
 
 
-@media screen and (max-width: 400px) {
-	
-	#copyRight	{
-		font-size: xx-small;
-	}
-}
+		.clearfix:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		.more{background:var(--theme-color); color:#fff;width:100%;display:inline-block;position:relative;vertical-align:middle;overflow:hidden;display:flex;flex-wrap:wrap;padding-top:75px;}
+		.more .col ul {list-style-type:none;font-size:15px;line-height:24px;margin-bottom:40px;}
+		.more .col li{margin-bottom:8px;}
+		.learn{margin-left: 10%;width: 1360px;}
+		.more .col{width:25%;float:left;}
+		.more h4{font-size:18px;line-height:20px;cursor:default;}
+		.more a{color:#fff;text-decoration:none;}
+		.col>ul>a>li{position:relative;}
+		.col>ul>a>li:before{content:"";position:absolute;width:20%;height:2px;bottom:0;left:0;background-color:#ffffff;visibility:hidden;-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transition:all 0.3s ease-in-out 0s;transition:all 0.3s ease-in-out 0s;}
+		.col>ul>a>li:hover:before{visibility:visible;-webkit-transform:scaleX(1);transform:scaleX(1);}
+
+
+		#copyRight	{
+			font-size: small;
+			margin: 0;
+			color: white;
+			font-family: "Raleway", sans-serif;
+			text-align: center;
+		}
+
+
+		@media screen and (max-width: 400px) {
+			
+			#copyRight	{
+				font-size: xx-small;
+			}
+		}
