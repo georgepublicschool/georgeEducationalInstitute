@@ -188,20 +188,32 @@ header {
 	display: none;
 }
 
-.banner-image {
+.banner-image,
+.banner-image-secondary {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
 	align-items: center;
 	min-height: 400px;
-	height: calc(100vh - 120px);
+}
+
+.banner-image {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("classroom.jpg");
+	height: calc(100vh - 120px);
+}
+
+.about-us {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img_mountains.jpg");
 }
 
 .banner-text {
 	color: var(--font-light);
 	text-shadow: 0 2px black;
+}
+
+.banner-image-secondary .banner-text {
+	text-align: center;
 }
 
 .banner-text h1 {
