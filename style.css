@@ -466,7 +466,7 @@ body.unscroll {
   justify-content: space-around;
   align-items: center;
   margin: 1.5rem auto;
-  width: 75%;
+  width: 100%;
   max-width: 1200px;
   color: gray;
 }
