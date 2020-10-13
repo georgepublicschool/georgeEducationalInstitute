@@ -460,6 +460,69 @@ body.unscroll {
 .floating {
 	overflow: hidden;
 }
+#test-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.5rem auto;
+  width: 75%;
+  max-width: 1200px;
+  color: gray;
+}
+.test{
+   margin-bottom: 50px;
+    width: 264px;
+		}
+.top-box {
+  background-color: #dfdbd5;
+  width: 263px;
+  height: 103px;
+  position: absolute;
+  z-index: 1;
+	    }
+.test img{
+  background-color: gray;
+  border-radius: 100%;
+  border: 3px soild #d4d4d4;
+  width: 133px;
+  height: 133px;
+  object-fit: cover;
+  position: relative;
+  display: block;
+  margin: auto;
+  top: 15px;
+  z-index: 5;
+}
+
+.bottom-box {
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16);
+  width: 263px;
+  height: 238px;
+  transform: translateY(-50px);
+  background-color: #ffffff;
+}
+blockquote {
+    margin: 0 auto;
+    padding: 0;
+    width: 220px;
+    
+}
+
+blockquote  p {
+	font-style: italic;
+	font-size: 16px;
+	line-height: 21px;
+	padding-top: 60px;
+}
+.test-details {
+    text-align: center;
+
+ }	
+ .test-details span {
+   font-size: 18px;
+   font-weight: 500;
+    }
 
 .more {
 	background: var(--theme-color);
