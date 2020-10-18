@@ -355,7 +355,7 @@ section a {
 
 .course {
 	width: 100%;
-	padding: 20px 0;
+	padding: 10px;
 }
 
 .course:hover {
@@ -669,7 +669,6 @@ blockquote p {
 	}
 	.course {
 		width: 33.33%;
-		padding: 0 20px;
 	}
 	.nav-secondary {
 		display: initial;
