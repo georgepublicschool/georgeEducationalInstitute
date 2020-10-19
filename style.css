@@ -143,8 +143,9 @@ ul li {
 	padding: 15px;
 }
 
-.under-menu a:hover {
-	background-color: #e0e0e0;
+.under-menu a:hover,
+.under-menu a.selected {
+	background-color: #efe0e0;
 }
 
 .drop-menu {
@@ -432,6 +433,12 @@ section a {
 .overlay-menu ul li {
 	display: block;
 	margin: 25px 0;
+}
+
+.overlay-menu ul a.selected li {
+	text-decoration: underline;
+	text-underline-position: under;
+	-ms-text-underline-position: under;
 }
 
 .overlay-menu button, .overlay-menu button:hover {
