@@ -210,7 +210,7 @@ header {
 	display: none;
 }
 
-.banner-image, .banner-image-secondary {
+.banner-image, .banner-image-secondary, .banner-image-courses {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -221,12 +221,25 @@ header {
 
 .banner-image {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/classroom.jpg");
-	height: calc(100vh - 120px);
+	height: calc(100vh - 150px);
 }
 
 .about-us {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/classroom.jpg");
 }
+
+.banner-image-courses {
+	height: calc(100vh - 250px);
+}
+
+.banner-image-courses.acc { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/acc.jpg"); background-position-x: left; }
+.banner-image-courses.cds { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/cds.jpg"); background-position-x: left; }
+.banner-image-courses.military { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/military.jpg") }
+.banner-image-courses.navy { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/navy.jpg") }
+.banner-image-courses.nda { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/nda.jpeg"); background-position-y: top; }
+.banner-image-courses.ota { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/ota.jpg") }
+.banner-image-courses.rimc { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/rimc.jpeg"); background-position-y: bottom; }
+.banner-image-courses.sainik { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/sainik.jpeg"); background-position: left top; }
 
 .banner-text {
 	color: var(--font-light);
@@ -645,6 +658,9 @@ blockquote p {
 }
 
 @media screen and (min-width:1024px) {
+	.banner-image {
+		height: calc(100vh - 120px);
+	}	
 	.close-notification {
 		right: 30px;
 		top: 30px;
