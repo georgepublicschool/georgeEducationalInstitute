@@ -248,6 +248,21 @@
     </div>
 
     <p id="copyRight">&copy; All Rights Reserved to <strong>George Educational Institute</strong></p>
+
+    <div class="loader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            setTimeout(() => { document.getElementsByClassName("loader")[0].classList.add('hidden') }, 500)
+            setTimeout(() => { document.getElementsByClassName("loader")[0].remove() }, 1500);
+        }
+    </script>
 </body>
 
 </html>
