@@ -43,19 +43,19 @@
 
 @font-face {
 	font-family: "JosefinSans";
-	src: url('fonts/josefin_sans/static/JosefinSans-Regular.ttf');
+	src: url('fonts/josefin_sans/JosefinSans-Regular.ttf');
 }
 
 @font-face {
 	font-family: "JosefinSans";
 	font-weight: bold;
-	src: url('fonts/josefin_sans/static/JosefinSans-Bold.ttf');
+	src: url('fonts/josefin_sans/JosefinSans-Bold.ttf');
 }
 
 @font-face {
 	font-family: "JosefinSans";
 	font-weight: 100;
-	src: url('fonts/josefin_sans/static/JosefinSans-ExtraLight.ttf');
+	src: url('fonts/josefin_sans/JosefinSans-ExtraLight.ttf');
 }
 
 html {
