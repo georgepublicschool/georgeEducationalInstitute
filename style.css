@@ -465,22 +465,6 @@ body.unscroll {
 	overflow: hidden;
 }
 
-.director{
-	display: flex;
-	flex-wrap: wrap;
-}
-.director-img{
-	width: 25%;
-	padding: 40px;
-	margin-top: 100px;
-	
-}
-
-.director-text{
-	padding: 60px;
-	width: 70%;
-
-}
 .responsive {
 	padding: 20px 0;
 	float: left;
@@ -592,7 +576,6 @@ blockquote p {
 	padding-top: 75px;
 	padding-bottom: 40px;
 	line-height: 24px;
-	/* text-align: center; */
 }
 
 .more .col ul {
@@ -605,7 +588,6 @@ blockquote p {
 	margin-bottom: 8px;
 	display: block;
 	font-weight: normal;
-	/* text-align: center; */
 }
 
 .more .col {
@@ -618,7 +600,6 @@ blockquote p {
 	line-height: 20px;
 	cursor: default;
 	text-transform: uppercase;
-	/* text-align: center; */
 }
 
 .col>ul>li>a, .col>ul>a>li {
@@ -632,13 +613,10 @@ blockquote p {
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	/* left: 50%; */
 	background-color: var(--font-light);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
-	/* -webkit-transform: scaleX(0) translateX(-50%);
-	transform: scaleX(0) translateX(-50%); */
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 }
@@ -647,8 +625,6 @@ blockquote p {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
-	/* -webkit-transform: scaleX(1) translateX(-50%);
-	transform: scaleX(1) translateX(-50%); */
 }
 
 #copyRight {
@@ -658,6 +634,25 @@ blockquote p {
 	text-align: center;
 	margin: 0;
 	padding: 10px 0;
+}
+
+.about li {
+	list-style: square;
+	text-justify: auto;
+}
+
+.director {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.director-img,
+.director-text {
+	width: 100%;
+}
+
+.director-img {
+	padding: 0 25px;
 }
 
 @media screen and (min-width:768px) {
@@ -675,7 +670,6 @@ blockquote p {
 		width: 50%;
 		padding: 20px;
 	}
-
 	.responsive {
 		padding: 20px;
 		width: 50%;
@@ -695,6 +689,15 @@ blockquote p {
 	}
 	.more .col {
 		width: 50%;
+	}
+	.director-img{
+		width: 30%;
+		margin-top: 60px;
+		padding: 0;
+	}
+	.director-text{
+		width: 70%;
+		padding: 0 0 0 30px;
 	}
 }
 
@@ -756,24 +759,6 @@ blockquote p {
 		width: 25%;
 	}
 }
-@media screen and (max-width:768px) {
-.director{
-	display: flex;
-
-}
-.director-img{
-	width: 30%;
-	padding: 10px;
-	margin-top: 100px;
-	
-}
-
-.director-text{
-	padding: 25px;
-	width: 60%;
-
-}
-}
 
 @media screen and (max-width:400px) {
 	.wrap {
@@ -782,24 +767,10 @@ blockquote p {
 	.banner-text h1 {
 		font-size: 40px;
 	}
-	
-.director-img{
-	width: 100%;
-	padding: auto;
-	margin-top: 100px;
-	
-}
-
-.director-text{
-	padding: 25px;
-	width: 100%;
-
-}
-}
-
-.about li {
-	list-style: square;
-	text-justify: auto;
+	.director-img,
+	.director-text {
+		padding: 0;
+	}
 }
 
 .loader {
