@@ -1,82 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://georgeinst.com/</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://georgeinst.com/</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/about.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/about.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/sainik.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/courses.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/military.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/sainik.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/rimc.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/military.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/nda.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/rimc.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/cds.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/nda.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/ota.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/cds.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/acc.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/ota.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/navy.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/acc.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/facility.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/navy.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/why.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/facility.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/gallery.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/why.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://georgeinst.com/contact.html</loc>
-  <lastmod>2020-10-20T17:53:08+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://georgeinst.com/gallery.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://georgeinst.com/contact.html</loc>
+<lastmod>2020-10-21T06:22:46+00:00</lastmod>
+<priority>0.80</priority>
+</url>
 </urlset>
