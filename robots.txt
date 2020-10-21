@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+User-agent: GoogleBot
+Disallow: /nogooglebot/
+Allow: /
+
+Sitemap: https://georgeinst.com/sitemap.xml
