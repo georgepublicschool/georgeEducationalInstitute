@@ -515,14 +515,6 @@ body.unscroll {
 	position: relative;
 }
 
-.top-box {
-	background-color: #dfdbd5;
-	width: 100%;
-	height: 120px;
-	position: absolute;
-	z-index: 1;
-}
-
 .test img {
 	background-color: gray;
 	border-radius: 100%;
@@ -540,9 +532,8 @@ body.unscroll {
 .bottom-box {
 	box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16);
 	width: 100%;
-	transform: translateY(-50px);
 	background-color: #ffffff;
-	padding: 20px 30px 10px 30px;
+	padding: 60px 30px 20px 30px;
 	border-radius: 5px;
 }
 
@@ -560,8 +551,6 @@ blockquote {
 blockquote p {
 	font-style: italic;
 	font-size: 16px;
-	line-height: 21px;
-	padding-top: 40px;
 }
 
 .test-details {
@@ -675,9 +664,6 @@ blockquote p {
 	.test {
 		padding: 20px;
 		width: 50%;
-	}
-	.top-box {
-		width: calc(100% - 40px);
 	}
 	.more .col {
 		font-size: 16px;
