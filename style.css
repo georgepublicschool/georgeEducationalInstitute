@@ -145,7 +145,9 @@ ul li {
 
 .under-menu a:hover,
 .under-menu a.selected {
-	background-color: #efe0e0;
+	color: var(--theme-color);
+	transition-duration: 0.2s;
+
 }
 
 .drop-menu {
@@ -463,6 +465,22 @@ body.unscroll {
 	overflow: hidden;
 }
 
+.director{
+	display: flex;
+	flex-wrap: wrap;
+}
+.director-img{
+	width: 25%;
+	padding: 40px;
+	margin-top: 100px;
+	
+}
+
+.director-text{
+	padding: 60px;
+	width: 70%;
+
+}
 .responsive {
 	padding: 20px 0;
 	float: left;
@@ -657,6 +675,7 @@ blockquote p {
 		width: 50%;
 		padding: 20px;
 	}
+
 	.responsive {
 		padding: 20px;
 		width: 50%;
@@ -737,6 +756,24 @@ blockquote p {
 		width: 25%;
 	}
 }
+@media screen and (max-width:768px) {
+.director{
+	display: flex;
+
+}
+.director-img{
+	width: 30%;
+	padding: 10px;
+	margin-top: 100px;
+	
+}
+
+.director-text{
+	padding: 25px;
+	width: 60%;
+
+}
+}
 
 @media screen and (max-width:400px) {
 	.wrap {
@@ -745,6 +782,19 @@ blockquote p {
 	.banner-text h1 {
 		font-size: 40px;
 	}
+	
+.director-img{
+	width: 100%;
+	padding: auto;
+	margin-top: 100px;
+	
+}
+
+.director-text{
+	padding: 25px;
+	width: 100%;
+
+}
 }
 
 .about li {
@@ -832,3 +882,4 @@ blockquote p {
 		opacity: 0;
 	}
 }
+	
