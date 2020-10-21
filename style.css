@@ -478,6 +478,12 @@ body.unscroll {
 	background-color: var(--theme-color);
 }
 
+.gallery:hover {
+	transition-duration: 0.4s;
+    cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
 .gallery img {
 	width: 100%;
 	border:5px solid var(--theme-color);
