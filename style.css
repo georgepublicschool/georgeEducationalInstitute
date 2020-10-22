@@ -464,7 +464,17 @@ section a {
 body.unscroll {
 	overflow: hidden;
 }
-
+.about-george{
+	display: flex;
+	flex-wrap: wrap;
+}
+.about-img,
+.about-text{
+width: 100%;
+}
+.about-text{
+	padding: 0 25px ;  
+}
 .responsive {
 	padding: 20px 0;
 	float: left;
@@ -699,6 +709,18 @@ blockquote p {
 		width: 70%;
 		padding: 0 0 0 30px;
 	}
+	.about-img{
+		width: 30%;
+		float: right;
+		margin-top: 50px;
+		
+	}
+	.about-text{
+		width: 70%;
+		padding: 0 60px 0 0 ;
+
+		
+	}
 }
 
 @media screen and (min-width:1024px) {
@@ -769,6 +791,10 @@ blockquote p {
 	}
 	.director-img,
 	.director-text {
+		padding: 0;
+	}
+	.about-text,
+	.about-img{
 		padding: 0;
 	}
 }
