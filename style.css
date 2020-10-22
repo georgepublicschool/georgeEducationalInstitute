@@ -252,12 +252,20 @@ header {
 	text-align: center;
 }
 
-.banner-text h1 {
-	font-size: 48px;
+.banner-text h1,
+.banner-text h2 {
 	line-height: 1.25;
 	margin: 0 0 0 0;
 	margin-bottom: 0.5em;
 	max-width: 600px;
+}
+
+.banner-text h2 {
+	font-size: 48px;
+}
+
+.banner-text h2 {
+	font-size: 36px;
 }
 
 button {
@@ -269,7 +277,6 @@ button {
 	padding: 10px 25px;
 	color: var(--font-light);
 	background-color: var(--theme-color);
-	text-shadow: 0 2px 2px var(--font-dark);
 	box-shadow: 0 2px 4px #333333;
 	border-radius: 2px;
 	text-align: center;
@@ -668,8 +675,14 @@ blockquote p {
 	.wrap {
 		padding: 0 70px;
 	}
+	.banner-image-secondary .banner-text {
+		text-align: left;
+	}
 	.banner-text h1 {
 		font-size: 64px;
+	}
+	.banner-text h2 {
+		font-size: 48px;
 	}
 	.course {
 		width: 50%;
@@ -875,4 +888,3 @@ blockquote p {
 		opacity: 0;
 	}
 }
-	
