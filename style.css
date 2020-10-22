@@ -464,17 +464,12 @@ section a {
 body.unscroll {
 	overflow: hidden;
 }
-.about-george{
-	display: flex;
-	flex-wrap: wrap;
-}
+
 .about-img,
 .about-text{
-width: 100%;
+	width: 100%;
 }
-.about-text{
-	padding: 0 25px ;  
-}
+
 .responsive {
 	padding: 20px 0;
 	float: left;
@@ -700,26 +695,19 @@ blockquote p {
 	.more .col {
 		width: 50%;
 	}
-	.director-img{
+	.director-img {
 		width: 30%;
 		margin-top: 60px;
 		padding: 0;
 	}
-	.director-text{
+	.director-text {
 		width: 70%;
 		padding: 0 0 0 30px;
 	}
-	.about-img{
-		width: 30%;
+	.about-img {
+		width: 50%;
 		float: right;
-		margin-top: 50px;
-		
-	}
-	.about-text{
-		width: 70%;
-		padding: 0 60px 0 0 ;
-
-		
+		padding: 0 0 20px 20px;
 	}
 }
 
@@ -774,6 +762,18 @@ blockquote p {
 	.more .col {
 		width: 25%;
 	}
+	.about-grg{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+	.about-img {
+		width: 33.33%;
+	}
+	.about-text{
+		width: 66.67%;
+	}
 }
 
 @media screen and (min-width:1366px) {
@@ -791,10 +791,6 @@ blockquote p {
 	}
 	.director-img,
 	.director-text {
-		padding: 0;
-	}
-	.about-text,
-	.about-img{
 		padding: 0;
 	}
 }
